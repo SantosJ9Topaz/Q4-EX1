@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+
+    <title>Q4 Quiz 1:BMI Calculator </title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>BMI Calculator</h1>
+        <form>
+            <div class="mb-3">
+                <label for="height" class="form-label">Height (m)</label>
+                <input type="number" class="form-control" id="height" placeholder="Enter height">
+            </div>
+            <div class="mb-3">
+                <label for="weight" class="form-label">Weight (kg)</label>
+                <input type="number" class="form-control" id="weight" placeholder="Enter weight">
+            </div>
+            <button type="button" class="btn btn-primary" id="calculateBtn">Calculate</button>
+        </form>
+        <div id="result"></div>
+
+        <p>BMI Categories</p>
+        <p>Underweight: BMI less than 18.5.</p>
+        <p>Healthy Weight: BMI between 18.5 and 24.9.</p>
+        <p>Overweight: BMI between 25 and 29.9.</p>
+        <p>Obesity: BMI of 30 or greater.</p>
+        
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('calculateBtn').addEventListener('click', function() {
+            let height = parseFloat(document.getElementById('height').value);
+            let weight = parseFloat(document.getElementById('weight').value);
+            let bmi = weight / (height * height);
+            document.getElementById('result').innerHTML = 'Your BMI is: ' + bmi.toFixed(2);
+        });
+    </script>
+
+</body>
+</html>
+
