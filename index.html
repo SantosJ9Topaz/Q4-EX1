@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Math Method</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>JS MATH METHOD</h1>
+        <img src="https://cdn.racingnews365.com/_570x570_crop_center-center_none/feralo01.png?v=1741601656" alt="Alonso" class="character">
+        <p class="tagline">Let's calculate!</p>
+        
+        <label for="val1" class="label">ENTER YOUR VALUES:</label>
+        <input type="number" id="val1" placeholder="First number">
+        <input type="number" id="val2" placeholder="Second number">
+
+        <h2>Choose what you want to solve for:</h2>
+        <div class="buttons">
+            <button onclick="calculate('add')">ADD</button>
+            <button onclick="calculate('subtract')">SUBTRACT</button>
+            <button onclick="calculate('multiply')">MULTIPLY</button>
+            <button onclick="calculate('divide')">DIVIDE</button>
+        </div>
+
+        <input type="text" id="result" placeholder="Answer" readonly>
+        <button onclick="refresh()" class="refresh-btn">REFRESH</button>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
